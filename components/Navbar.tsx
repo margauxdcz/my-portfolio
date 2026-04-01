@@ -1,17 +1,26 @@
 "use client";
-import AnimatedButton from "./AnimatedButton";
+
+import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center w-full px-8 py-4 border-b border-gray-200">
+    <nav className="w-full bg-white text-black flex justify-between items-center px-8 py-4">
       {/* Left: Name as a link to the home page */}
-      <AnimatedButton href="/">Margarita Dela Cruz</AnimatedButton>
+      <Link href="/" className="text-2xl font-bold hover:text-gray-300 transition-colors">
+        Margarita Dela Cruz
+      </Link>
 
-      {/* Right: Navigation buttons */}
-      <div className="flex gap-8">
-        <AnimatedButton href="/about">About</AnimatedButton>
-        <AnimatedButton href="/projects">Projects</AnimatedButton>
-        <AnimatedButton href="/contact">Contact</AnimatedButton>
+      {/* Right: Buttons */}
+      <div className="flex gap-6 text-lg font-semibold">
+        <Link href="/about" className="hover:text-gray-300 transition-colors">
+          About
+        </Link>
+        <Link href="/projects" className="hover:text-gray-300 transition-colors">
+          Projects
+        </Link>
+        <Link href="/contact" className="hover:text-gray-300 transition-colors">
+          Contact
+        </Link>
       </div>
     </nav>
   );
