@@ -23,7 +23,7 @@ export default function Home() {
 
           {/* Description */}
           <p className="text-lg text-gray-700">
-            I’m a third-year MIS student at Ateneo de Manila University passionate about turning complex problems into efficient, scalable solutions. I enjoy optimizing processes and designing systems that connect business strategy with technology, and I’m currently diving into full-stack development to expand my technical toolkit. Driven by curiosity and a competitive spirit, I thrive on challenges that create real impact.          </p>
+            I’m a third-year Management Information Systems student at Ateneo de Manila University passionate about turning complex problems into efficient, scalable solutions. I enjoy optimizing processes and designing systems that connect business strategy with technology, and I’m currently diving into full-stack development to expand my technical toolkit. Driven by curiosity and a competitive spirit, I thrive on challenges that create real impact.          </p>
 
 
           <div className="flex items-center gap-4 mt-6">
