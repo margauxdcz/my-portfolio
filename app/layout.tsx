@@ -5,7 +5,7 @@ const raleway = Raleway({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "Margaux Portfolio",
-  description: "Minimalist and professional portfolio",
+  description: "An overview of my activities, projects, and interests.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
