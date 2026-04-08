@@ -42,7 +42,7 @@ export default function Home() {
 
             {/* Resume Button */}
             <a
-              href="/Margaux_Resume.pdf"
+              href="/DELA CRUZ_Resume.docx (1).pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-white hover:text-black border border-black transition-colors"
