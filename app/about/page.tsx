@@ -3,155 +3,220 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import { GraduationCap, Palette, Trophy, Code2 } from "lucide-react";
 
 export default function AboutPage() {
   const cards = [
     {
       title: "Education",
-      icon: "🎓",
+      icon: <GraduationCap className="w-5 h-5 text-gray-700" />,
       preview: "BS Management Information Systems, Ateneo de Manila University (2027)",
-      previewImg: "/IMG_7021.jpeg", // small preview image for the card
+      previewImg: "/IMG_7021.jpeg",
       description: (
         <>
-          <strong>BS Management Information Systems with a specialization in Enterprise Systems (2027)</strong>
-          <br />
-          Studying at Ateneo has been a balancing act between curiosity, challenges, and figuring out how to make the most of my time. Through extracurriculars like varsity Taekwondo, the Guidon, Ateneo Blue Repertory, and the Management Information Systems Association, I’ve pushed my limits and discovered the areas I enjoy most. Currently specializing in enterprise systems, I’m diving into full-stack development to expand my technical toolkit and explore how technology can solve complex business problems.
-          <br />
+          <strong className="block mb-3 text-gray-900">
+            BS Management Information Systems with a specialization in Enterprise Systems (2027)
+          </strong>
+          <p className="mb-4">
+            Studying at Ateneo has been a balancing act between curiosity, challenges, and figuring out how to make the most of my time. Through extracurriculars like varsity Taekwondo, The Guidon, Ateneo Blue Repertory, and the Management Information Systems Association, I’ve pushed my limits and discovered the areas I enjoy most.
+          </p>
+          <p>
+            Currently specializing in enterprise systems, I’m diving into full-stack development to expand my technical toolkit and explore how technology can solve complex business problems.
+          </p>
         </>
       ),
-      images: ["/edu1.jpg", "/edu2.jpg", "/edu3.jpg"], // stacked images
+      images: ["/edu1.jpg", "/edu2.jpg", "/edu3.jpg"],
     },
     {
       title: "Hobbies",
-      icon: "🎨",
+      icon: <Palette className="w-5 h-5 text-gray-700" />,
       preview: "Speedcubing, Bouldering, Swimming, Playing Games",
       previewImg: "/hobbies_preview.jpg",
       description: (
         <>
-          <strong>Favorite Hobbies</strong>
-          <br />
-          I enjoy reading, painting, and hiking during weekends. I also like exploring tech projects and coding challenges whenever I have time.
-          <br />
+          <strong className="block mb-3 text-gray-900">Favorite Hobbies</strong>
+          <p className="mb-4">
+            Outside of academics and extracurriculars, I enjoy hobbies that challenge me both mentally and physically.
+          </p>
+          <p>
+            Some of my favorites include speedcubing, bouldering, swimming, and playing games. These help me stay sharp, competitive, and creative while also giving me space to recharge.
+          </p>
         </>
       ),
       images: ["/hobby1.jpg", "/hobby2.jpg", "/hobby3.jpg"],
     },
     {
       title: "Extracurriculars",
-      icon: "🏆",
-      preview: "Taekwondo Varsity, The Guidon, Ateneo Blue Repertory, Management Information Systems Association",
+      icon: <Trophy className="w-5 h-5 text-gray-700" />,
+      preview:
+        "Taekwondo Varsity, The Guidon, Ateneo Blue Repertory, Management Information Systems Association",
       previewImg: "/poomsae.jpeg",
       description: (
         <>
-          <strong>Extracurricular Involvements</strong>
-          <br />
-          Active member of the school's debate club, coding club, and volunteer organization. These experiences have helped me develop leadership, teamwork, and organizational skills while making meaningful contributions to the community.
-          <br />
+          <strong className="block mb-3 text-gray-900">Extracurricular Involvements</strong>
+          <p className="mb-4">
+            My extracurriculars have played a huge role in shaping how I lead, collaborate, and challenge myself.
+          </p>
+          <p>
+            Through Ateneo Taekwondo Varsity, The Guidon, Ateneo Blue Repertory, and the Management Information Systems Association, I’ve built discipline, communication skills, adaptability, and confidence in high-pressure environments.
+          </p>
         </>
       ),
       images: ["/extra1.jpg", "/extra2.jpg", "/extra3.jpg"],
     },
     {
       title: "Skills",
-      icon: "💻",
-      preview: "Problem-Solving, Systems Thinking, Project Management, Web Development",
+      icon: <Code2 className="w-5 h-5 text-gray-700" />,
+      preview: "Python, Django, Next.js, Tailwind, Android Studio",
       previewImg: "/skills_preview.jpg",
       description: (
         <>
-          <strong>Technical Skills</strong>
-          <br />
-          Python, HTML, CSS, MySQL, Android Studio, Java need to fix this
-          <br />
-          <strong>Soft Skills</strong>
-          <br />
-          Problem-solving, systems thinking, project management, communication, teamwork
+          <strong className="block mb-3 text-gray-900">Technical Skills</strong>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {[
+              "Python",
+              "Django",
+              "HTML",
+              "CSS",
+              "MySQL",
+              "Next.js",
+              "Tailwind CSS",
+              "Android Studio",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+
+          <strong className="block mb-3 text-gray-900">Soft Skills</strong>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Problem-Solving",
+              "Systems Thinking",
+              "Project Management",
+              "Communication",
+              "Teamwork",
+              "Leadership",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </>
       ),
       images: ["/skill1.jpg", "/skill2.jpg", "/skill3.jpg"],
     },
   ];
 
-  const [activeCard, setActiveCard] = useState<string | null>(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
   return (
     <main className="bg-white text-gray-900 min-h-screen relative">
       <Navbar />
 
       {/* Page Heading */}
-      <div className="px-8 py-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">About Me</h1>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-          Click a card to see more details about each section.
+      <section className="px-6 md:px-8 py-16 md:py-20 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">About Me</h1>
+        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+          A quick look into my background, interests, experiences, and skills.
         </p>
-      </div>
+      </section>
 
       {/* Cards Grid */}
-      <div className="max-w-6xl mx-auto px-8 pb-16 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {cards.map((card) => (
-          <div
-            key={card.title}
-            onClick={() => setActiveCard(card.title)}
-            className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer flex flex-col items-center"
-          >
-            {/* Icon + Title */}
-            <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2">
-              <span>{card.icon}</span> {card.title}
-            </h2>
+      <section className="max-w-6xl mx-auto px-6 md:px-8 pb-20">
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {cards.map((card, index) => (
+            <button
+              key={card.title}
+              onClick={() => setActiveCard(index)}
+              className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col text-left overflow-hidden"
+            >
+              {/* Preview Image */}
+              {card.previewImg && (
+                <div className="w-full h-40 relative">
+                  <Image
+                    src={card.previewImg}
+                    alt={card.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
 
-            {/* Preview Image */}
-            {card.previewImg && (
-              <div className="w-full h-32 relative mb-2">
-                <Image src={card.previewImg} alt={card.title} fill className="object-cover rounded-lg" />
+              {/* Card Content */}
+              <div className="p-5 flex flex-col flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  {card.icon}
+                  <h2 className="text-lg font-semibold text-gray-900">{card.title}</h2>
+                </div>
+
+                <p className="text-sm text-gray-600 leading-relaxed">{card.preview}</p>
               </div>
-            )}
-
-            {/* Preview Text */}
-            <p className="text-gray-600 text-center">{card.preview}</p>
-          </div>
-        ))}
-      </div>
+            </button>
+          ))}
+        </div>
+      </section>
 
       {/* Modal Overlay */}
-      {activeCard && (
+      {activeCard !== null && (
         <div
-          className="fixed inset-0 flex items-center justify-center z-50"
-          style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+          className="fixed inset-0 z-50 flex items-center justify-center px-4"
+          style={{ backgroundColor: "rgba(0,0,0,0.25)" }}
           onClick={() => setActiveCard(null)}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white w-full max-w-6xl max-h-[90vh] overflow-y-auto rounded-xl p-8 transform scale-90 opacity-0 animate-openModal relative transition-all duration-300 flex flex-col md:flex-row gap-6"
+            className="bg-white w-full max-w-6xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 md:p-10 shadow-2xl relative animate-openModal"
           >
+            {/* Close Button */}
             <button
               onClick={() => setActiveCard(null)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 text-2xl font-bold"
+              className="absolute top-4 right-5 text-gray-400 hover:text-gray-900 text-3xl font-light"
             >
               &times;
             </button>
 
-            {/* Full Card Content */}
-            {cards
-              .filter((card) => card.title === activeCard)
-              .map((card) => (
-                <div key={card.title} className="flex-1 flex flex-col md:flex-row gap-6">
-                  {/* Description */}
-                  <div className="flex-1">
-                    <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
-                      <span>{card.icon}</span> {card.title}
-                    </h2>
-                    <div className="text-gray-700 text-lg">{card.description}</div>
-                  </div>
-
-                  {/* Stacked Images */}
-                  <div className="flex flex-col gap-2 flex-shrink-0 w-40">
-                    {card.images.map((img, idx) => (
-                      <div key={idx} className="w-full h-24 relative">
-                        <Image src={img} alt={`${card.title} ${idx + 1}`} fill className="object-cover rounded-lg" />
-                      </div>
-                    ))}
-                  </div>
+            {/* Modal Content */}
+            <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start">
+              {/* Left Side */}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-3 mb-5">
+                  {cards[activeCard].icon}
+                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
+                    {cards[activeCard].title}
+                  </h2>
                 </div>
-              ))}
+
+                <div className="text-gray-700 text-base md:text-lg leading-relaxed">
+                  {cards[activeCard].description}
+                </div>
+              </div>
+
+              {/* Right Side - Stacked Images */}
+              <div className="w-full md:w-52 flex-shrink-0 flex flex-col gap-3">
+                {cards[activeCard].images.map((img, idx) => (
+                  <div
+                    key={idx}
+                    className="w-full h-28 md:h-32 relative overflow-hidden rounded-2xl border border-gray-200 shadow-sm"
+                  >
+                    <Image
+                      src={img}
+                      alt={`${cards[activeCard].title} ${idx + 1}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -160,15 +225,16 @@ export default function AboutPage() {
         @keyframes openModal {
           from {
             opacity: 0;
-            transform: scale(0.9);
+            transform: scale(0.96);
           }
           to {
             opacity: 1;
             transform: scale(1);
           }
         }
+
         .animate-openModal {
-          animation: openModal 0.3s ease-out forwards;
+          animation: openModal 0.25s ease-out forwards;
         }
       `}</style>
     </main>
