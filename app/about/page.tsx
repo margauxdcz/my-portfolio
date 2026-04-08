@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import { GraduationCap, Palette, Trophy, Code2 } from "lucide-react";
+import { GraduationCap, Palette, Trophy, Code2, Layers3, FileCode2, Sparkles, Wrench, Brain } from "lucide-react";
 
 export default function AboutPage() {
   const cards = [
@@ -65,24 +65,20 @@ export default function AboutPage() {
       images: ["/extra1.jpg", "/extra2.jpg", "/extra3.jpg"],
     },
     {
-      title: "Skills",
-      icon: <Code2 className="w-5 h-5 text-gray-700" />,
-      preview: "Python, Django, Next.js, Tailwind, Android Studio",
-      previewImg: "/skills_preview.jpg",
-      description: (
-        <>
-          <strong className="block mb-3 text-gray-900">Technical Skills</strong>
-          <div className="flex flex-wrap gap-2 mb-6">
-            {[
-              "Python",
-              "Django",
-              "HTML",
-              "CSS",
-              "MySQL",
-              "Next.js",
-              "Tailwind CSS",
-              "Android Studio",
-            ].map((skill) => (
+    title: "Skills",
+    icon: <Code2 className="w-5 h-5 text-gray-700" />,
+    preview: "Python, TypeScript, Django, Next.js, Systems Thinking",
+    previewImg: "/IMG_2233.jpeg",
+    description: (
+      <div className="space-y-6">
+        {/* Languages */}
+        <div>
+          <div className="flex items-center gap-2 mb-3">
+            <FileCode2 className="w-4 h-4 text-gray-500" />
+            <strong className="text-gray-900">Languages</strong>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {["Python", "TypeScript", "HTML", "CSS"].map((skill) => (
               <span
                 key={skill}
                 className="px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700"
@@ -91,16 +87,58 @@ export default function AboutPage() {
               </span>
             ))}
           </div>
+        </div>
 
-          <strong className="block mb-3 text-gray-900">Soft Skills</strong>
+        {/* Frameworks */}
+        <div>
+          <div className="flex items-center gap-2 mb-3">
+            <Layers3 className="w-4 h-4 text-gray-500" />
+            <strong className="text-gray-900">Frameworks & Libraries</strong>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {["Django", "Next.js", "Tailwind CSS"].map((skill) => (
+              <span
+                key={skill}
+                className="px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Tools */}
+        <div>
+          <div className="flex items-center gap-2 mb-3">
+            <Wrench className="w-4 h-4 text-gray-500" />
+            <strong className="text-gray-900">Databases & Development Tools</strong>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {["MySQL", "Android Studio", "Git", "GitHub"].map((skill) => (
+              <span
+                key={skill}
+                className="px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* MIS Edge */}
+        <div>
+          <div className="flex items-center gap-2 mb-3">
+            <Brain className="w-4 h-4 text-gray-500" />
+            <strong className="text-gray-900">Systems & Strategy</strong>
+          </div>
           <div className="flex flex-wrap gap-2">
             {[
-              "Problem-Solving",
               "Systems Thinking",
-              "Project Management",
-              "Communication",
-              "Teamwork",
-              "Leadership",
+              "Process Analysis",
+              "Workflow Design",
+              "Requirements Analysis",
+              "Project Coordination",
+              "Documentation",
             ].map((skill) => (
               <span
                 key={skill}
@@ -110,10 +148,34 @@ export default function AboutPage() {
               </span>
             ))}
           </div>
-        </>
-      ),
-      images: ["/skill1.jpg", "/skill2.jpg", "/skill3.jpg"],
-    },
+        </div>
+
+        {/* Leadership */}
+        <div>
+          <div className="flex items-center gap-2 mb-3">
+            <Sparkles className="w-4 h-4 text-gray-500" />
+            <strong className="text-gray-900">Leadership & Communication</strong>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Team Leadership",
+              "Communication",
+              "Collaboration",
+              "Problem-Solving",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    ),
+    images: ["/cafe_code.JPG", "/gsports.JPG", "/frog.jpeg"],
+  },
   ];
 
   const [activeCard, setActiveCard] = useState<number | null>(null);
