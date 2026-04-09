@@ -5,37 +5,40 @@ import { Folder } from "lucide-react";
 
 export default function ProjectsPage() {
   return (
-    <main className="bg-gray-50 min-h-screen text-gray-900">
+    <main className="min-h-screen bg-[#f8f6f2] text-[#1f1f1c] overflow-x-hidden">
       <Navbar />
 
       {/* Header */}
-      <div className="text-center px-6 md:px-16 py-20">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      <section className="text-center px-6 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-20 md:py-24">
+        <p className="text-sm uppercase tracking-[0.22em] text-[#7a766d] mb-2">
           Projects
-        </h1>
-        <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-          This section is a work in progress. I’m currently building and organizing my projects. 
-          Check back soon for updates and showcases of my latest work!
         </p>
-      </div>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 leading-tight">
+          My Work in Progress
+        </h1>
+        <p className="text-base sm:text-lg text-[#5f5a52] max-w-2xl mx-auto leading-relaxed">
+          I’m currently building and organizing my projects. Soon, you’ll be able to see my portfolio, code samples, and technical showcases here. Stay tuned!
+        </p>
+
+        <div className="mt-6 h-px w-24 bg-[#d8d2c7] mx-auto rounded-full" />
+      </section>
 
       {/* WIP placeholder */}
-      <div className="max-w-4xl mx-auto px-6 md:px-0 flex flex-col items-center justify-center gap-8 py-16">
-        <div className="flex flex-col items-center justify-center p-12 rounded-xl border-2 border-dashed border-gray-300 w-full text-center bg-white shadow-md animate-pulse">
-          <Folder className="w-12 h-12 text-gray-400 mb-4" />
-          <h2 className="text-2xl font-semibold mb-2 text-gray-700">
+      <section className="max-w-3xl mx-auto px-6 sm:px-8 md:px-12 py-12 sm:py-16 md:py-20 flex flex-col items-center gap-8">
+        <div className="w-full bg-white shadow-lg rounded-2xl border-2 border-dashed border-[#ddd6ca] animate-pulse px-8 py-12 sm:px-12 sm:py-16 text-center transition-all hover:shadow-xl">
+          <Folder className="w-12 h-12 text-[#a8a396] mb-4 mx-auto" />
+          <h2 className="text-2xl sm:text-3xl font-semibold text-[#1c1c18] mb-3">
             Work in Progress
           </h2>
-          <p className="text-gray-500 max-w-md">
-            I’m currently preparing my projects page. 
-            Soon, you’ll be able to see my portfolio, code samples, and technical showcases here.
+          <p className="text-[#6b665e] text-sm sm:text-base leading-relaxed max-w-md mx-auto">
+            I’m currently preparing my projects page. Soon, you’ll be able to explore my portfolio, code samples, and technical showcases in a clean, organized way.
           </p>
         </div>
 
-        <div className="text-gray-400 italic">
+        <p className="text-[#7a766d] italic text-sm sm:text-base text-center">
           Trust the process :D
-        </div>
-      </div>
+        </p>
+      </section>
     </main>
   );
 }

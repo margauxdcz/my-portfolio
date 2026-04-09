@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { Activity, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import {
   GraduationCap,
-  Palette,
+  ActivityIcon,
   Trophy,
   Code2,
   Layers3,
@@ -19,200 +19,152 @@ export default function AboutPage() {
   const cards = [
     {
       title: "Education",
-      icon: <GraduationCap className="w-5 h-5 text-gray-700" />,
-      preview: "BS Management Information Systems, Ateneo de Manila University (2027)",
+      icon: <GraduationCap className="w-5 h-5 text-[#9c7c6c]" />,
+      preview:
+        "BS Management Information Systems, Ateneo de Manila University (2027)",
       previewImg: "/IMG_7021.jpeg",
       description: (
         <>
-          <strong className="block mb-3 text-gray-900">
+          <strong className="block mb-3 text-[#3b3229]">
             BS Management Information Systems with a specialization in Enterprise Systems (2027)
           </strong>
-          <p className="mb-4">
-            Studying at Ateneo has been a balancing act between curiosity, challenges, and figuring out how to make the most of my time. Through extracurriculars like varsity Taekwondo, The Guidon, Ateneo Blue Repertory, and the Management Information Systems Association, I’ve pushed my limits and discovered the areas I enjoy most.
-          </p>
-          <p>
-            Currently specializing in enterprise systems, I’m diving into full-stack development to expand my technical toolkit and explore how technology can solve complex business problems.
-          </p>
+          <p className="mb-4 text-[#5f5a52]">
+            Studying Management Information Systems at Ateneo de Manila University has been a journey of curiosity, problem-solving, and discovery. I’ve developed a strong understanding of enterprise systems, business process management, and data-driven decision-making. Through my studies, I explore how technology can support organizational goals, streamline operations, and provide meaningful insights that drive effective strategies.         </p>
+          <p className="text-[#5f5a52]">
+            Beyond technical skills, my coursework has strengthened my analytical thinking, project management, and ability to approach complex challenges strategically. I’m also diving deeper into full-stack development to complement my understanding of systems and expand the ways I can bring ideas to life.          </p>
         </>
       ),
-      images: ["/edu1.jpg", "/edu2.jpg", "/edu3.jpg"],
+      images: ["/ateneo.jpg", "/study.jpg", "/ateneo2.jpg"],
     },
     {
       title: "Hobbies",
-      icon: <Palette className="w-5 h-5 text-gray-700" />,
-      preview: "Speedcubing, Bouldering, Swimming, Playing Games",
+      icon: <ActivityIcon className="w-5 h-5 text-[#9c7c6c]" />,
+      preview: "From mental puzzles to energetic hobbies, here’s what keeps me moving and thinking.s",
       previewImg: "/eat.jpg",
       description: (
         <>
-          <strong className="block mb-3 text-gray-900">Favorite Hobbies</strong>
-          <p className="mb-4">
-            Outside of academics and extracurriculars, I enjoy hobbies that challenge me both mentally and physically.
-          </p>
-          <p>
-            Some of my favorites include speedcubing, bouldering, swimming, and playing games. These help me stay sharp, competitive, and creative while also giving me space to recharge.
-          </p>
+          <strong className="block mb-3 text-[#3b3229]">Favorite Hobbies</strong>
+          <p className="mb-4 text-[#5f5a52]">
+            Outside of academics and extracurriculars, I immerse myself in hobbies that challenge both my mind and body. Activities like speedcubing, bouldering, and swimming push me to think creatively, act strategically, and adapt quickly to new situations. They sharpen my problem-solving skills, enhance my focus, and cultivate a sense of perseverance that carries over into all areas of my life.          </p>
+          <p className="text-[#5f5a52]">
+            I also enjoy games and activities that spark my curiosity and keep me engaged. They’re a way to unwind, try new things, and stay creative, while still keeping me active and focused. These hobbies remind me that growth can come from exploring, experimenting, and simply having fun.          </p>
         </>
       ),
-      images: ["/hobby1.jpg", "/hobby2.jpg", "/hobby3.jpg"],
+      images: ["/bouldering.jpg"],
     },
     {
       title: "Extracurriculars",
-      icon: <Trophy className="w-5 h-5 text-gray-700" />,
-      preview: "Taekwondo Varsity, The Guidon, Ateneo Blue Repertory, Management Information Systems Association",
+      icon: <Trophy className="w-5 h-5 text-[#9c7c6c]" />,
+      preview:
+        "From sports to clubs, these are the arenas where I’ve honed skills beyond the classroom.s",
       previewImg: "/poomsae.jpeg",
       description: (
         <>
-          <strong className="block mb-3 text-gray-900">Extracurricular Involvements</strong>
-          <p className="mb-4">
-            My extracurriculars have played a huge role in shaping how I lead, collaborate, and challenge myself.
+          <strong className="block mb-3 text-[#3b3229]">
+            Extracurricular Involvements
+          </strong>
+          <p className="mb-4 text-[#5f5a52]">
+            My extracurriculars have been instrumental in shaping how I lead, collaborate, and navigate challenges.
           </p>
-          <p>
-            Through Ateneo Taekwondo Varsity, The Guidon, Ateneo Blue Repertory, and the Management Information Systems Association, I’ve built discipline, communication skills, adaptability, and confidence in high-pressure environments.
-          </p>
+          <p className="text-[#5f5a52]">
+            From competing with Ateneo Taekwondo Varsity to contributing in The Guidon, performing with Ateneo Blue Repertory, and engaging with the Management Information Systems Association, I’ve developed discipline, resilience, adaptability, and strong communication skills—qualities that allow me to thrive in dynamic, high-pressure environments and continuously push my own limits.          </p>
         </>
       ),
-      images: ["/extra1.jpg", "/extra2.jpg", "/extra3.jpg"],
+      images: ["/guidon.JPEG", "/kyorugi.jpg"],
     },
     {
       title: "Skills",
-      icon: <Code2 className="w-5 h-5 text-gray-700" />,
-      preview: "Python, TypeScript, Django, Next.js, Systems Thinking",
+      icon: <Code2 className="w-5 h-5 text-[#9c7c6c]" />,
+      preview: "From programming languages to clear communication, these are the tools I use to make things happen.",
       previewImg: "/IMG_2233.jpeg",
       description: (
         <div className="space-y-6">
-          {/* Languages */}
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <FileCode2 className="w-4 h-4 text-gray-500" />
-              <strong className="text-gray-900">Languages</strong>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {["Python", "TypeScript", "HTML", "CSS"].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Frameworks */}
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <Layers3 className="w-4 h-4 text-gray-500" />
-              <strong className="text-gray-900">Frameworks & Libraries</strong>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {["Django", "Next.js", "Tailwind CSS"].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Tools */}
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <Wrench className="w-4 h-4 text-gray-500" />
-              <strong className="text-gray-900">Databases & Development Tools</strong>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {["MySQL", "Android Studio", "Git", "GitHub"].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Systems & Strategy */}
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <Brain className="w-4 h-4 text-gray-500" />
-              <strong className="text-gray-900">Systems & Strategy</strong>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {[
+          {/* Skills */}
+          {[
+            {
+              name: "Languages",
+              icon: FileCode2,
+              items: ["Python", "TypeScript", "Java", "HTML", "CSS"],
+            },
+            {
+              name: "Frameworks & Libraries",
+              icon: Layers3,
+              items: ["Django", "Next.js"],
+            },
+            {
+              name: "Tools",
+              icon: Wrench,
+              items: ["MySQL", "Android Studio", "Git", "GitHub", "Vercel", "Figma"],
+            },
+            {
+              name: "Systems & Strategy",
+              icon: Brain,
+              items: [
                 "Systems Thinking",
                 "Process Analysis",
                 "Workflow Design",
                 "Requirements Analysis",
                 "Project Coordination",
                 "Documentation",
-              ].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700"
-                >
-                  {skill}
-                </span>
-              ))}
+              ],
+            },
+            {
+              name: "Leadership & Communication",
+              icon: Sparkles,
+              items: ["Team Leadership", "Communication", "Collaboration", "Problem-Solving"],
+            },
+          ].map((group) => (
+            <div key={group.name}>
+              <div className="flex items-center gap-2 mb-3 text-[#3b3229]">
+                <group.icon className="w-4 h-4 text-[#9c7c6c]" />
+                <strong>{group.name}</strong>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1.5 rounded-full border border-[#ddd6ca] bg-[#f8f6f2] text-xs sm:text-sm font-medium text-[#5f5a52]"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-
-          {/* Leadership */}
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <Sparkles className="w-4 h-4 text-gray-500" />
-              <strong className="text-gray-900">Leadership & Communication</strong>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "Team Leadership",
-                "Communication",
-                "Collaboration",
-                "Problem-Solving",
-              ].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       ),
-      images: ["/cafe_code.JPG", "/gsports.JPG", "/frog.jpeg"],
+      images: ["/cafe_code.JPG", "/gsports.JPG", "/study.jpg"],
     },
   ];
 
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
   return (
-    <main className="bg-gray-50 text-gray-900 min-h-screen relative">
+    <main className="min-h-screen bg-[#f8f6f2] text-[#1f1f1c] relative overflow-x-hidden">
       <Navbar />
 
       {/* Page Heading */}
-      <section className="px-6 md:px-8 py-16 md:py-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">About Me</h1>
-        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-          A quick look into my background, interests, experiences, and skills.
+      <section className="px-6 sm:px-8 md:px-12 lg:px-16 py-16 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-4">
+          About Me
+        </h1>
+        <p className="text-base sm:text-lg md:text-xl text-[#5f5a52] max-w-2xl mx-auto leading-relaxed">
+          A quick look into my background, interests, extracurricular activities, and skills.
         </p>
+        <div className="mt-6 h-px w-24 bg-[#d8d2c7] mx-auto rounded-full" />
       </section>
 
       {/* Cards Grid */}
-      <section className="max-w-6xl mx-auto px-6 md:px-8 pb-20">
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="max-w-6xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pb-20">
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
           {cards.map((card, index) => (
             <button
               key={card.title}
               onClick={() => setActiveCard(index)}
-              className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col text-left overflow-hidden"
+              className="bg-white border border-[#ddd6ca] rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col overflow-hidden w-full"
             >
-              {/* Preview Image */}
               {card.previewImg && (
-                <div className="w-full h-40 relative">
+                <div className="w-full h-40 sm:h-44 relative">
                   <Image
                     src={card.previewImg}
                     alt={card.title}
@@ -221,44 +173,53 @@ export default function AboutPage() {
                   />
                 </div>
               )}
-
-              {/* Card Content */}
-              <div className="p-5 flex flex-col flex-1">
-                <div className="flex items-center gap-2 mb-3 text-gray-900">
+              <div className="p-4 sm:p-5 flex flex-col flex-1">
+                <div className="flex items-center gap-2 mb-3 text-[#3b3229]">
                   {card.icon}
-                  <h2 className="text-lg font-semibold">{card.title}</h2>
+                  <h2 className="text-base sm:text-lg font-semibold">{card.title}</h2>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed">{card.preview}</p>
+                <p className="text-sm sm:text-base text-[#5f5a52] leading-relaxed">{card.preview}</p>
               </div>
             </button>
           ))}
         </div>
       </section>
 
-      {/* Modal Floating */}
+      {/* Modal */}
       {activeCard !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center px-4 pointer-events-none">
+        <div
+          className="fixed inset-0 z-50 bg-black/25 backdrop-blur-sm flex items-center justify-center px-4 sm:px-6 py-6"
+          onClick={() => setActiveCard(null)}
+        >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="pointer-events-auto bg-white w-full max-w-6xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 md:p-10 shadow-2xl animate-openModal flex flex-col md:flex-row gap-8 md:gap-10"
+            className="relative bg-white w-full max-w-6xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 md:p-8 shadow-2xl animate-openModal flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-10"
           >
-            {/* Left Side */}
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-3 mb-5 text-gray-900">
+            <button
+              onClick={() => setActiveCard(null)}
+              className="absolute top-3 right-4 text-[#9c7c6c] hover:text-[#3b3229] text-3xl font-light z-10"
+              aria-label="Close modal"
+            >
+              &times;
+            </button>
+
+            <div className="flex-1 min-w-0 pr-0 lg:pr-4">
+              <div className="flex items-center gap-3 mb-4 text-[#3b3229]">
                 {cards[activeCard].icon}
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{cards[activeCard].title}</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
+                  {cards[activeCard].title}
+                </h2>
               </div>
-              <div className="text-gray-700 text-base md:text-lg leading-relaxed">
+              <div className="text-[#5f5a52] text-sm sm:text-base md:text-lg leading-relaxed">
                 {cards[activeCard].description}
               </div>
             </div>
 
-            {/* Right Side - Stacked Images */}
-            <div className="w-full md:w-52 flex-shrink-0 flex flex-col gap-3">
+            <div className="w-full lg:w-56 xl:w-64 flex-shrink-0 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3">
               {cards[activeCard].images.map((img, idx) => (
                 <div
                   key={idx}
-                  className="w-full h-28 md:h-32 relative overflow-hidden rounded-2xl border border-gray-200 shadow-sm"
+                  className="w-full h-28 sm:h-32 lg:h-36 relative overflow-hidden rounded-2xl border border-[#ddd6ca] shadow-sm"
                 >
                   <Image
                     src={img}
@@ -269,14 +230,6 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-
-            {/* Close Button */}
-            <button
-              onClick={() => setActiveCard(null)}
-              className="absolute top-4 right-5 text-gray-400 hover:text-gray-900 text-3xl font-light"
-            >
-              &times;
-            </button>
           </div>
         </div>
       )}
