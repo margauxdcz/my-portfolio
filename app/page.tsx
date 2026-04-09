@@ -4,6 +4,59 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 
 export default function Home() {
+  const experiences = [
+    {
+      title: "Ateneo Taekwondo Varsity Team",
+      date: "July 2023 – Present",
+      bullets: [
+        "Manage a demanding academic and athletic schedule, training daily from 5:30–7:30 AM, building discipline, resilience, and highly effective time management.",
+        "Mentor grade-school athletes, developing their skills while enhancing leadership, communication, and coaching abilities.",
+        "Represent Ateneo in national competitions, demonstrating teamwork, strategic thinking, and a competitive spirit that drives continuous improvement and success."
+      ],
+      image: "/kyorugiTeam.JPG",
+    },
+    {
+      title: "The GUIDON Sports Staffer",
+      date: "July 2025 – Present",
+      bullets: [
+        "Write engaging and accurate articles on Ateneo varsity sports teams under tight deadlines, demonstrating strong observation and storytelling skills.",
+        "Collaborate with editors and fellow staffers to produce high-quality, timely content for a wide readership.",
+        "Balance academic and athletic responsibilities while covering games onsite and online, showing adaptability and excellent multitasking skills."
+      ],
+      image: "/guidon.JPEG",
+    },
+    {
+      title: "Ateneo Blue Repertory",
+      date: "September 2025 – Present",
+      bullets: [
+        "Developed and maintained Google Sheets trackers for finance, attendance, and ticket sales, improving team efficiency.",
+        "Supported front-of-house operations during performances, ensuring seamless audience experiences.",
+        "Automated ticketing communications using mail merge for confirmations and reminders, enhancing attendee engagement."
+      ],
+      image: "/brep.jpg",
+    },
+    {
+      title: "The Blackbelt Sorority",
+      date: "November 2023 – November 2025",
+      bullets: [
+        "Successfully balanced intensive late-night training sessions with academic commitments, demonstrating exceptional discipline, resilience, and time management under demanding schedules.",
+        "Led and coordinated competition logistics, ensuring seamless ingress and egress of athletes and smooth execution of high-stakes events.",
+        "Served as secretariat and court official for Philippine Taekwondo Association promotion tests, managing critical administrative and operational responsibilities to guarantee precise, professional, and orderly event execution."
+      ],
+      image: "/blackbelt.jpg",
+    },
+    {
+      title: "Management Information Systems Association (MISA) – Finance Officer",
+      date: "October 2024 – May 2025",
+      bullets: [
+        "Managed budgeting for merchandise initiatives, preparing best, feasible, and worst-case financial scenarios.",
+        "Coordinated with multiple suppliers to secure cost-effective, high-quality procurement.",
+        "Oversaw merchandise distribution for Wave 2, ensuring timely delivery and accurate allocation."
+      ],
+      image: "/misalogo.png",
+    },
+  ];
+
   return (
     <main className="flex flex-col min-h-screen bg-[#f8f6f2] text-[#1f1f1c] overflow-x-hidden">
       {/* Navbar */}
@@ -18,17 +71,13 @@ export default function Home() {
             I'm <span className="font-bold text-[#9c7c6c]">Margaux</span>
           </h1>
 
-          {/* Line separator */}
           <div className="w-28 sm:w-36 md:w-48 h-1 bg-[#d8d2c7] mt-4 mb-5 sm:mb-6 rounded-full" />
 
-          {/* Description */}
           <p className="text-sm sm:text-base md:text-lg text-[#5f5a52] leading-relaxed max-w-2xl">
             I’m a third-year Management Information Systems student at Ateneo de Manila University passionate about turning complex problems into efficient, scalable solutions. I enjoy optimizing processes and designing systems that connect business strategy with technology, and I’m currently diving into full-stack development to expand my technical toolkit. Driven by curiosity and a competitive spirit, I thrive on challenges that create real impact.
           </p>
 
-          {/* Buttons */}
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-6 sm:mt-8">
-            {/* LinkedIn Button */}
             <a
               href="https://www.linkedin.com/in/margarita-simone-dela-cruz-3683b1215/"
               target="_blank"
@@ -46,7 +95,6 @@ export default function Home() {
               </svg>
             </a>
 
-            {/* Resume Button */}
             <a
               href="/DELA CRUZ_Resume.docx (1).pdf"
               target="_blank"
@@ -69,6 +117,44 @@ export default function Home() {
               priority
             />
           </div>
+        </div>
+      </section>
+
+      {/* Experiences Section */}
+      <section className="max-w-6xl mx-auto px-5 sm:px-6 md:px-10 lg:px-16 py-16">
+        <h2 className="text-3xl font-bold mb-10 text-[#1f1f1c]">Experience</h2>
+
+        <div className="flex flex-col gap-10">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="flex flex-col md:flex-row items-start gap-6 bg-white rounded-2xl shadow-md p-6 md:p-8 hover:shadow-lg transition-shadow"
+            >
+              {exp.image && (
+                <div className="flex-shrink-0 w-full md:w-48 lg:w-56 h-48 md:h-48 lg:h-56 relative">
+                  <Image
+                    src={exp.image}
+                    alt={exp.title + " image"}
+                    fill
+                    className="object-cover rounded-xl"
+                  />
+                </div>
+              )}
+              <div className="flex-1 md:pl-6 mt-4 md:mt-0">
+                <h3 className="text-xl md:text-2xl font-semibold text-[#9c7c6c]">
+                  {exp.title}
+                </h3>
+                <p className="text-sm md:text-base text-[#5f5a52] mb-3">
+                  {exp.date}
+                </p>
+                <ul className="list-disc list-inside text-sm md:text-base text-[#1f1f1c] space-y-2">
+                  {exp.bullets.map((bullet, idx) => (
+                    <li key={idx}>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </main>

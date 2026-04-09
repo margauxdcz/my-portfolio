@@ -14,10 +14,10 @@ export default function ProjectsPage() {
           Projects
         </p>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 leading-tight">
-          My Work in Progress
+          Work in Progress
         </h1>
         <p className="text-base sm:text-lg text-[#5f5a52] max-w-2xl mx-auto leading-relaxed">
-          I’m currently building and organizing my projects. Soon, you’ll be able to see my portfolio, code samples, and technical showcases here. Stay tuned!
+          I’m currently building and organizing my projects. Stay tuned!
         </p>
 
         <div className="mt-6 h-px w-24 bg-[#d8d2c7] mx-auto rounded-full" />
@@ -31,7 +31,7 @@ export default function ProjectsPage() {
             Work in Progress
           </h2>
           <p className="text-[#6b665e] text-sm sm:text-base leading-relaxed max-w-md mx-auto">
-            I’m currently preparing my projects page. Soon, you’ll be able to explore my portfolio, code samples, and technical showcases in a clean, organized way.
+            I’m currently preparing my projects page. Soon, you’ll be able to explore my portfolio, code samples, and technical showcases.
           </p>
         </div>
 
