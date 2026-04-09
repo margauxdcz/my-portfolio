@@ -40,7 +40,7 @@ export default function AboutPage() {
       title: "Hobbies",
       icon: <ActivityIcon className="w-5 h-5 text-[#9c7c6c]" />,
       preview: "From mental puzzles to energetic hobbies, here’s what keeps me moving and thinking.s",
-      previewImg: "/eat.jpg",
+      previewImg: "/eating.jpg",
       description: (
         <>
           <strong className="block mb-3 text-[#3b3229]">Favorite Hobbies</strong>
@@ -70,7 +70,7 @@ export default function AboutPage() {
             From competing with Ateneo Taekwondo Varsity to contributing in The Guidon, performing with Ateneo Blue Repertory, and engaging with the Management Information Systems Association, I’ve developed discipline, resilience, adaptability, and strong communication skills—qualities that allow me to thrive in dynamic, high-pressure environments and continuously push my own limits.          </p>
         </>
       ),
-      images: ["/guidon.JPEG", "/kyorugi.jpg"],
+      images: ["/guidon.JPEG", "/kyorugiTeam.jpg"],
     },
     {
       title: "Skills",
