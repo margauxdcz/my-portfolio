@@ -4,7 +4,7 @@ import { Raleway } from "next/font/google";
 const raleway = Raleway({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata = {
-  title: "Margaux Portfolio",
+  title: "Margarita Dela Cruz",
   description: "An overview of my activities, projects, and interests.",
 };
 
