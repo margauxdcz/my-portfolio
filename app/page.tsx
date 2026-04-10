@@ -36,7 +36,7 @@ export default function Home() {
       image: "/brep.jpg",
     },
     {
-      title: "The Blackbelt Sorority",
+      title: "Taekwondo Blackbelt Sorority",
       date: "November 2023 – November 2025",
       bullets: [
         "Successfully balanced intensive late-night training sessions with academic commitments, demonstrating exceptional discipline, resilience, and time management under demanding schedules.",
