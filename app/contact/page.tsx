@@ -39,7 +39,7 @@ export default function ContactPage() {
       type: "Resume",
       icon: <FileText className="w-5 h-5" />,
       value: "Download PDF",
-      href: "/DELA CRUZ_Resume.docx (1).pdf",
+      href: "/Updated_Resume.docx",
       description: "My most recent resume.",
     },
     {

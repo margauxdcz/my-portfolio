@@ -96,7 +96,7 @@ export default function Home() {
             </a>
 
             <a
-              href="/DELA CRUZ_Resume.docx (1).pdf"
+              href="/Updated_Resume.docx"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 sm:px-6 py-2.5 sm:py-3 bg-[#9c7c6c] text-[#f8f6f2] text-sm sm:text-base font-medium rounded-lg shadow-md hover:bg-[#b1927d] transition-colors"
