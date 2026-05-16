@@ -8,7 +8,7 @@ const projects = [
     title: "MetroAllstar Inventory System",
     context: "Business Applications Development · Ateneo de Manila University",
     type: "Systems Design · Process Improvement · Full-Stack Development",
-    image: null, // replace with "/metroallstar.png" when ready
+    image: "/metroallstar.png",
     summary:
       "Diagnosed a warehouse operations breakdown and designed a system from scratch, turning fragmented, error-prone manual processes into a centralized, auditable workflow.",
     sections: [
