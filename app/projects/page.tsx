@@ -1,101 +1,214 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import { Folder, ExternalLink } from "lucide-react";
 import Image from "next/image";
+
+const projects = [
+  {
+    title: "MetroAllstar Inventory System",
+    context: "Business Applications Development · Ateneo de Manila University",
+    type: "Systems Design · Process Improvement · Full-Stack Development",
+    image: null, // replace with "/metroallstar.png" when ready
+    summary:
+      "Diagnosed a warehouse operations breakdown and designed a system from scratch, turning fragmented, error-prone manual processes into a centralized, auditable workflow.",
+    sections: [
+      {
+        number: "01",
+        label: "The Situation",
+        content:
+          "MetroAllstar's warehouse team was managing inventory, requisitions, and dispatch entirely through manual records. There was no single source of truth as data lived across spreadsheets and paper trails, making it easy for errors to go undetected and hard for anyone to get a clear picture of stock status at any given moment.",
+      },
+      {
+        number: "02",
+        label: "My Approach",
+        content:
+          "Without a predefined brief, I started by mapping existing workflows, identifying where information was getting lost or duplicated, and defining what the system actually needed to do before writing a single line of code. The goal was to build something people would actually use, not just something technically functional.",
+      },
+      {
+        number: "03",
+        label: "What I Built",
+        content: null,
+        bullets: [
+          {
+            lead: "Unified operations end-to-end.",
+            detail:
+              "Centralized requisitions, dispatch, arrivals, and inventory tracking into one system, eliminating the need for cross-referencing multiple records.",
+          },
+          {
+            lead: "Built-in safeguards against human error.",
+            detail:
+              "Role-based access control ensured the right people could only touch what they were responsible for, reducing data integrity risk across the board.",
+          },
+          {
+            lead: "Real-time visibility where there was none.",
+            detail:
+              "Minimum stock alerts and a requisition progress tracker gave the team live operational awareness, something manual bookkeeping simply couldn't provide.",
+          },
+          {
+            lead: "Automated the tedious.",
+            detail:
+              "Bill-of-materials calculations that previously required manual computation were fully automated, dynamically adjusting supply quantities per product.",
+          },
+        ],
+      },
+      {
+        number: "04",
+        label: "What This Shows",
+        content:
+          "More than just building a software solution, I diagnosed a process problem, scoped a solution without a predefined brief, and delivered a system that addressed the root causes, not just the symptoms. This is the kind of thinking I bring to any operational or analytical challenge.",
+      },
+    ],
+    stack: ["Django", "Python", "PostgreSQL", "Requirements Gathering", "Process Mapping", "Systems Design"],
+  },
+];
 
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-[#f8f6f2] text-[#1f1f1c] overflow-x-hidden">
       <Navbar />
 
-      {/* Header */}
-      <section className="text-center px-6 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-20 md:py-24">
-        <p className="text-sm uppercase tracking-[0.22em] text-[#7a766d] mb-2">
+      {/* ── Header ───────────────────────────────────────────────────── */}
+      <section className="text-center px-6 sm:px-8 md:px-12 lg:px-16 pt-24 pb-14">
+        <p className="text-[10px] uppercase tracking-[0.22em] text-[#b09484] mb-4 font-semibold">
+          What I've worked on
+        </p>
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-5 text-[#2a211a]"
+          style={{ fontFamily: "'DM Serif Display', Georgia, serif" }}
+        >
           Projects
-        </p>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 leading-tight">
-          Selected Work
         </h1>
-        <p className="text-base sm:text-lg text-[#5f5a52] max-w-2xl mx-auto leading-relaxed">
-          A look into what I’ve been building — focused on practical systems and real-world applications.
+        <p className="text-[15px] text-[#7a6f65] max-w-md mx-auto leading-relaxed">
+          Problems I've been handed, how I approached them, and what came out the other side.
         </p>
-
-        <div className="mt-6 h-px w-24 bg-[#d8d2c7] mx-auto rounded-full" />
-      </section>
-
-      {/* Project */}
-      <section className="max-w-4xl mx-auto px-6 sm:px-8 md:px-12 py-12 sm:py-16 md:py-20">
-        <div className="bg-white shadow-lg rounded-2xl border border-[#e5dfd4] p-8 sm:p-10 transition-all hover:shadow-xl">
-
-          {/* Preview Image */}
-          <a
-            href="https://ateneo-room-management.vercel.app/"
-            target="_blank"
-            className="block mb-8 overflow-hidden rounded-xl border border-[#e5dfd4] relative group"
-          >
-            <Image
-              src="/room-management.png"
-              alt="Ateneo Room Management System Preview"
-              width={1200}
-              height={700}
-              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition flex items-center justify-center">
-              <span className="opacity-0 group-hover:opacity-100 text-sm font-medium bg-white px-3 py-1 rounded-full shadow">
-                View Live
-              </span>
-            </div>
-          </a>
-
-          {/* Title */}
-          <div className="flex items-center gap-3 mb-4">
-            <Folder className="w-6 h-6 text-[#a8a396]" />
-            <h2 className="text-2xl sm:text-3xl font-semibold">
-              Ateneo Room Management System
-            </h2>
-          </div>
-
-          {/* Description */}
-          <p className="text-[#6b665e] text-sm sm:text-base leading-relaxed mb-6">
-            A web-based platform that simplifies room reservations, approvals, and scheduling through a more intuitive and user-friendly interface, improving how users interact with and manage shared spaces.
-          </p>
-
-          {/* Key Features */}
-          <div className="mb-6">
-            <p className="text-sm font-medium text-[#1f1f1c] mb-2">
-              Key Features - Coming Soon
-            </p>
-            {/*<ul className="text-sm text-[#6b665e] space-y-1 list-disc list-inside">
-              <li>Room reservation and scheduling system</li>
-              <li>Approval workflow for administrators</li>
-              <li>Interactive and user-friendly UI</li>
-              <li>Centralized space management</li>
-            </ul>*/}
-          </div>
-
-          {/* Tech Stack */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            <span className="text-xs bg-[#f1eee8] px-3 py-1 rounded-full">Next.js</span>
-            <span className="text-xs bg-[#f1eee8] px-3 py-1 rounded-full">Tailwind</span>
-            <span className="text-xs bg-[#f1eee8] px-3 py-1 rounded-full">System Design</span>
-          </div>
-
-          {/* CTA */}
-          <a
-            href="https://ateneo-room-management.vercel.app/"
-            target="_blank"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[#1f1f1c] hover:underline"
-          >
-            View Project <ExternalLink className="w-4 h-4" />
-          </a>
+        <div className="mt-10 flex items-center justify-center gap-3">
+          <div className="h-px w-10 bg-gradient-to-r from-transparent to-[#d6c9be]" />
+          <div className="w-1.5 h-1.5 rounded-full bg-[#c4a897]" />
+          <div className="h-px w-10 bg-gradient-to-l from-transparent to-[#d6c9be]" />
         </div>
-
-        <p className="text-[#7a766d] italic text-sm sm:text-base text-center mt-10">
-          More projects coming soon.
-        </p>
       </section>
+
+      {/* ── Project Cards ────────────────────────────────────────────── */}
+      <section className="max-w-3xl mx-auto px-6 sm:px-8 md:px-12 pb-28 space-y-8">
+        {projects.map((project) => (
+          <article
+            key={project.title}
+            className="bg-white border border-[#e8e2da] rounded-3xl overflow-hidden shadow-sm"
+          >
+            {/* Image area */}
+            <div className="w-full h-56 bg-[#f0ece6] flex items-center justify-center relative overflow-hidden border-b border-[#e8e2da]">
+              {project.image ? (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+              ) : (
+                <div className="flex flex-col items-center gap-2 text-[#c4b8ae]">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 9h18M9 21V9" />
+                  </svg>
+                  <p className="text-[11px] uppercase tracking-widest font-medium">Screenshot coming soon</p>
+                </div>
+              )}
+            </div>
+
+            <div className="p-7 sm:p-10">
+              {/* Context + type */}
+              <p className="text-[11px] uppercase tracking-[0.15em] text-[#b09484] font-semibold mb-1">
+                {project.context}
+              </p>
+              <p className="text-[11px] text-[#c4b0a4] mb-4">{project.type}</p>
+
+              {/* Title */}
+              <h2
+                className="text-2xl sm:text-[28px] font-bold text-[#2a211a] mb-4 leading-snug"
+                style={{ fontFamily: "'DM Serif Display', Georgia, serif" }}
+              >
+                {project.title}
+              </h2>
+
+              {/* Summary callout */}
+              <div className="bg-[#faf7f4] border border-[#ede7e0] rounded-2xl px-5 py-4 mb-8">
+                <p className="text-[14px] text-[#5f5a52] leading-relaxed italic">
+                  {project.summary}
+                </p>
+              </div>
+
+              {/* Case study sections */}
+              <div className="space-y-7">
+                {project.sections.map((section) => (
+                  <div key={section.number} className="flex gap-5">
+                    {/* Number */}
+                    <div className="flex-shrink-0 mt-0.5">
+                      <div className="w-7 h-7 rounded-full bg-[#f0ece6] flex items-center justify-center">
+                        <span className="text-[10px] font-bold text-[#a08070]">{section.number}</span>
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 pb-7 border-b border-[#f5f1ed] last:border-0 last:pb-0">
+                      <p className="text-[11px] uppercase tracking-widest font-semibold text-[#b09484] mb-2">
+                        {section.label}
+                      </p>
+
+                      {section.content && (
+                        <p className="text-[14px] text-[#5f5a52] leading-relaxed">
+                          {section.content}
+                        </p>
+                      )}
+
+                      {section.bullets && (
+                        <ul className="space-y-3 mt-1">
+                          {section.bullets.map((b, i) => (
+                            <li key={i} className="flex gap-3">
+                              <span className="mt-2 w-1 h-1 rounded-full bg-[#c4a897] flex-shrink-0" />
+                              <p className="text-[14px] text-[#5f5a52] leading-relaxed">
+                                <span className="font-semibold text-[#3b3229]">{b.lead}</span>{" "}
+                                {b.detail}
+                              </p>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Stack */}
+              <div className="mt-8 pt-6 border-t border-[#f0ece6] flex flex-wrap gap-2">
+                {project.stack.map((s) => (
+                  <span
+                    key={s}
+                    className="px-3 py-1.5 rounded-full border border-[#e2dbd4] bg-[#faf8f5] text-[12px] font-medium text-[#5f5a52]"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+
+        {/* In progress placeholder */}
+        <div className="bg-white border border-dashed border-[#ddd6ca] rounded-3xl p-10 flex flex-col items-center justify-center text-center gap-3 opacity-60">
+          <div className="w-8 h-8 rounded-full bg-[#f0ece6] flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a08070" strokeWidth="1.8" strokeLinecap="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+          </div>
+          <p className="text-[12px] font-bold text-[#7a6f65] uppercase tracking-widest">In Progress</p>
+          <p className="text-[13px] text-[#b09484]">More projects on the way.</p>
+        </div>
+      </section>
+
+      <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+      `}</style>
     </main>
   );
 }

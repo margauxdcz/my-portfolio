@@ -9,51 +9,55 @@ export default function Home() {
       title: "Ateneo Taekwondo Varsity Team",
       date: "July 2023 – Present",
       bullets: [
-        "Manage a demanding academic and athletic schedule, training daily from 5:30–7:30 AM, building discipline, resilience, and highly effective time management.",
-        "Mentor grade-school athletes, developing their skills while enhancing leadership, communication, and coaching abilities.",
-        "Represent Ateneo in national competitions, demonstrating teamwork, strategic thinking, and a competitive spirit that drives continuous improvement and success."
+        "Maintained daily 5:30–7:30 AM training schedule alongside a full academic workload, demonstrating sustained discipline and time management.",
+        "Mentored grade school athletes, developing coaching, communication, and leadership skills through consistent hands-on engagement",
+        "Served as a competition official and logistics support for local (city level) and national competitions, ensuring smooth operational flow across multiple sites."
       ],
       image: "/kyorugiTeam.JPG",
     },
-    {
-      title: "The GUIDON Sports Staffer",
-      date: "July 2025 – Present",
-      bullets: [
-        "Write engaging and accurate articles on Ateneo varsity sports teams under tight deadlines, demonstrating strong observation and storytelling skills.",
-        "Collaborate with editors and fellow staffers to produce high-quality, timely content for a wide readership.",
-        "Balance academic and athletic responsibilities while covering games onsite and online, showing adaptability and excellent multitasking skills."
-      ],
-      image: "/guidon.JPEG",
-    },
-    {
-      title: "Ateneo Blue Repertory",
-      date: "September 2025 – Present",
-      bullets: [
-        "Developed and maintained Google Sheets trackers for finance, attendance, and ticket sales, improving team efficiency.",
-        "Supported front-of-house operations during performances, ensuring seamless audience experiences.",
-        "Automated ticketing communications using mail merge for confirmations and reminders, enhancing attendee engagement."
-      ],
-      image: "/brep.jpg",
-    },
-    {
-      title: "Taekwondo Blackbelt Sorority",
-      date: "November 2023 – November 2025",
-      bullets: [
-        "Successfully balanced intensive late-night training sessions with academic commitments, demonstrating exceptional discipline, resilience, and time management under demanding schedules.",
-        "Led and coordinated competition logistics, ensuring seamless ingress and egress of athletes and smooth execution of high-stakes events.",
-        "Served as secretariat and court official for Philippine Taekwondo Association promotion tests, managing critical administrative and operational responsibilities to guarantee precise, professional, and orderly event execution."
-      ],
-      image: "/blackbelt.jpg",
-    },
+
     {
       title: "Management Information Systems Association (MISA) – Finance Officer",
       date: "October 2024 – May 2025",
       bullets: [
-        "Managed budgeting for merchandise initiatives, preparing best, feasible, and worst-case financial scenarios.",
-        "Coordinated with multiple suppliers to secure cost-effective, high-quality procurement.",
-        "Oversaw merchandise distribution for Wave 2, ensuring timely delivery and accurate allocation."
+        "Managed high-precision inventory distribution, ensuring 100% fulfillment accuracy for 60+ units delivered to members. ",
+        "Coordinated with creative teams and external suppliers to balance production costs with brand quality standards.",
+        "Drove profitability by strategically holding surplus inventory for future cycles, achieving full cost recovery and high-margin returns through accurate financial forecasting."
+
       ],
       image: "/misalogo.png",
+    },
+    
+    {
+      title: "Ateneo Blue Repertory",
+      date: "September 2025 – Present",
+      bullets: [
+        "Built custom trackers using Google Sheets for ~1,200 transactions, ensuring 100% accuracy across finance and ticket inventory.",
+        "Supported front-of-house operations during performances, ensuring seamless audience experiences.",
+        "Automated ticket confirmations using mail merge for 200+ attendees per cycle, eliminating manual errors and saving hours of administrative work."
+      ],
+      image: "/brep.jpg",
+    },
+
+    {
+      title: "The GUIDON Sports Staffer",
+      date: "July 2025 – Present",
+      bullets: [
+        "Met 100% of editorial deadlines in a high-speed, 24/7 news cycle, producing coverage for varsity programs and the sports environment.",
+        "Acted as a primary liaison between the publication and various varsity organizations, managing relationships with team managers and athletes to coordinate interviews and real-time event reporting.",
+        "Collaborated with editorial leadership to synchronize coverage across multiple sports beats, ensuring consistent storytelling."
+      ],
+      image: "/guidon.JPEG",
+    },
+    
+    {
+      title: "Taekwondo Blackbelt Sorority",
+      date: "November 2023 – November 2025",
+      bullets: [
+        "Managed end-to-end logistics for large-scale competitions of 1,000+ participants, optimizing ingress and egress protocols to ensure seamless event flow and operational efficiency.",
+        "Served as a secretariat and official for PTA promotion tests and national competitions, upholding high standards of data accuracy and administrative oversight to ensure smooth operations across assessment events."
+      ],
+      image: "/TaekwondoBlackbeltSisterhood.jpeg",
     },
   ];
 
@@ -79,7 +83,7 @@ export default function Home() {
 
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-6 sm:mt-8">
             <a
-              href="https://www.linkedin.com/in/margarita-simone-dela-cruz-3683b1215/"
+              href="https://www.linkedin.com/in/margaritasimonedelacruz/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 text-[#f8f6f2] bg-[#9c7c6c] rounded-lg shadow-md hover:bg-[#b1927d] transition-colors"
@@ -96,7 +100,7 @@ export default function Home() {
             </a>
 
             <a
-              href="/Updated_Resume.docx"
+              href="/DELACRUZ_RESUME.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 sm:px-6 py-2.5 sm:py-3 bg-[#9c7c6c] text-[#f8f6f2] text-sm sm:text-base font-medium rounded-lg shadow-md hover:bg-[#b1927d] transition-colors"

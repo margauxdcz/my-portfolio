@@ -12,13 +12,13 @@ export default function ContactPage() {
       icon: <Mail className="w-5 h-5" />,
       value: "margauxsimone31@gmail.com",
       href: "mailto:margauxsimone31@gmail.com",
-      description: "For collaborations, opportunities, or a quick hello.",
+      description: "You may also contact me at simone.delacruz@student.ateneo.edu",
     },
     {
       type: "LinkedIn",
       icon: <FaLinkedin className="w-5 h-5" />,
-      value: "https://www.linkedin.com/in/margarita-simone-dela-cruz-3683b1215/",
-      href: "https://www.linkedin.com/in/margarita-simone-dela-cruz-3683b1215/",
+      value: "https://www.linkedin.com/in/margaritasimonedelacruz/",
+      href: "https://www.linkedin.com/in/margaritasimonedelacruz/",
       description: "Connect with me professionally.",
     },
     {
@@ -39,7 +39,7 @@ export default function ContactPage() {
       type: "Resume",
       icon: <FileText className="w-5 h-5" />,
       value: "Download PDF",
-      href: "/Updated_Resume.docx",
+      href: "DELACRUZ_RESUME.pdf",
       description: "My most recent resume.",
     },
     {

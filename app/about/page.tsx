@@ -69,10 +69,10 @@ export default function AboutPage() {
             <span className="font-normal text-base text-[#9c7c6c]">Specialization in Enterprise Systems · Class of 2027</span>
           </p>
           <p className="text-[#5f5a52] leading-relaxed">
-            Studying MIS at Ateneo has been a journey of curiosity, problem-solving, and discovery. I've built a strong foundation in enterprise systems, business process management, and data-driven decision-making — exploring how technology can support organizational goals and surface meaningful insights.
+            Studying MIS at Ateneo has been a journey of curiosity, problem-solving, and discovery. I've built a strong foundation in enterprise systems, business process management, and data-driven decision-making, exploring how technology can support organizational goals and surface meaningful insights.
           </p>
           <p className="text-[#5f5a52] leading-relaxed">
-            Beyond the technical, my coursework has sharpened my analytical thinking, project coordination, and strategic approach to complex challenges. I'm also diving into full-stack development to expand the ways I can bring ideas to life.
+            Beyond the technical, my coursework has sharpened my analytical thinking, project coordination, and strategic approach to complex challenges. I'm also diving into full-stack development as a side hobby to expand the ways I can bring ideas to life.
           </p>
         </div>
       ),
@@ -87,10 +87,10 @@ export default function AboutPage() {
         <div className="space-y-4">
           <p className="text-[#3b3229] font-semibold text-lg">Favorite Hobbies</p>
           <p className="text-[#5f5a52] leading-relaxed">
-            Outside academics and extracurriculars, I immerse myself in things that challenge both mind and body. Speedcubing, bouldering, and swimming push me to think creatively, act strategically, and adapt fast — sharpening focus and perseverance that carries into everything else I do.
+            Outside academics and extracurriculars, I immerse myself in things that challenge both mind and body. Speedcubing, bouldering, and swimming push me to think creatively, act strategically, and adapt fast, sharpening focus and perseverance that carries into everything else I do.
           </p>
           <p className="text-[#5f5a52] leading-relaxed">
-            I also love games and activities that spark curiosity. They're a way to unwind, try new things, stay creative, and stay active — a reminder that growth can come from exploring and simply having fun.
+            I also love games and activities that spark curiosity. They're a way to unwind, try new things, stay creative, and stay active, a reminder that growth can come from exploring and simply having fun.
           </p>
           <div className="flex flex-wrap gap-2 pt-2">
             {["Speedcubing", "Bouldering", "Swimming", "Gaming", "Reading"].map((h) => (
@@ -112,12 +112,12 @@ export default function AboutPage() {
         <div className="space-y-4">
           <p className="text-[#3b3229] font-semibold text-lg">Extracurricular Involvements</p>
           <p className="text-[#5f5a52] leading-relaxed">
-            My extracurriculars have been instrumental in shaping how I lead, collaborate, and navigate pressure. Each org has taught me something different — discipline, creativity, adaptability, storytelling.
+            My extracurriculars have been instrumental in shaping how I lead, collaborate, and navigate pressure. Each org has taught me something different: discipline, creativity, adaptability, storytelling.
           </p>
           <div className="space-y-3 pt-1">
             {[
               { org: "Ateneo Taekwondo Varsity", role: "Athlete", note: "Competing at the national level, discipline through repetition." },
-              { org: "The Guidon", role: "Staff", note: "Ateneo's student newspaper — storytelling and editorial thinking." },
+              { org: "The Guidon", role: "Sports Staffer", note: "Ateneo's student newspaper: storytelling and editorial thinking." },
               { org: "Ateneo Blue Repertory", role: "Sales Member", note: "University theatre org; managed sales and audience experience." },
               { org: "Management Information Systems Assoc.", role: "Finance Officer", note: "Led financial planning and budgeting for the organization's merchandise drive." },
             ].map(({ org, role, note }) => (
